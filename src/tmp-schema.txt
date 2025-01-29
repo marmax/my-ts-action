@@ -1,0 +1,111 @@
+{
+  "$id": "https://csas.cz/apim/gitops/schema/subscription.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "product": {
+      "$anchor": "ProductSchema",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "order": {
+      "$anchor": "OrderSchema",
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#ProductSchema"
+          }
+        }
+      }
+    }
+  }
+
+
+  "description": "xxxxx",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "product": {
+      "$ref": "https://csas.cz/apim/gitops/schema/product.schema.json"
+    },
+    "apis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [ "name", "apis" ]
+
+}
+
+
+ //"format": "date"
+
+
+
+
+
+// import { promises as fsp } from "fs";
+
+// import { parse as yamlParse } from "yaml";
+//
+// import Ajv from "ajv"
+// import * as schema_user from "./schema_user.json"
+// const ajv = new Ajv()
+// const validate_user = ajv.compile<User>(schema_user)
+//
+// interface User {
+//   username: string
+// }
+//
+// if (validate_user(cxt.body)) {
+//   // create user
+// } else {
+//   // report error
+//   cxt.status(400)
+// }
+
+
+
+// import * as schema_user from "./schema_user.json"
+// import * as schema_document from "./schema_document.json"
+
+// export const ajv = new Ajv()
+// ajv.addSchema(schema_user, "user")
+// ajv.addSchema(schema_document, "document")
+
+
+
+//
+// const ajv = new Ajv()
+//
+// const validate = ajv.compile(schema)
+// const valid = validate(instance)
+// if (!valid) console.log(validate.errors)
+
+
+
+// const Ajv = require('ajv/dist/2020');
+
+
+
+
+// Parse the content of the file and use APIsConfig as the type so that we can access the properties of the parsed content easily
+// const config = yamlParse(apisConfigContent) as APIsConfig;
+
+

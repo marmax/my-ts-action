@@ -1,0 +1,14 @@
+{
+  "name": "xxxxx",
+  "product": {},
+  "apis": [
+    {
+      "name": "abc-api",
+      "id": "4bd6f8a3-4f9a-4719-a632-658916375c4a"
+    },
+    {
+      "name": "abc-api",
+      "id": "4bd6f8a3-4f9a-4719-a632-658916375c4a"
+    }
+  ]
+}

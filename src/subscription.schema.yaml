@@ -1,0 +1,30 @@
+---
+"$id": https://csas.cz/apim/gitops/schema/subscription.schema.json
+"$schema": https://json-schema.org/draft/2020-12/schema
+title: Subscription
+type: object
+required:
+  - name
+  - apis
+properties:
+  name:
+    type: string
+#  product:
+#    "$ref": https://csas.cz/apim/gitops/schema/product.schema.json
+  apis:
+    type: array
+    items:
+      "$ref": "#/$defs/api"
+"$defs":
+  api:
+    type: object
+    required:
+      - name
+      - id
+    properties:
+      name:
+        type: string
+        description: The name of the api.
+      id:
+        type: string
+        format: uuid
